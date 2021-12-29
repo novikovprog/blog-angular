@@ -1,8 +1,11 @@
+// Importation des bibliotheques
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
-
-import {RegisterComponent} from "src/app/auth/components/register/register.component";
 import {RouterModule, Routes} from "@angular/router";
+import {ReactiveFormsModule} from "@angular/forms";
+// Les autres importations
+import {RegisterComponent} from "src/app/auth/components/register/register.component";
+
 
 const routes: Routes = [
   {
@@ -12,7 +15,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes), ReactiveFormsModule],
   declarations: [RegisterComponent]
 })
 export class AuthModule {}
